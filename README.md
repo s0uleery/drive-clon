@@ -1,6 +1,7 @@
 # Drive Clon
 
-Aplicación web tipo Google Drive que permite subir, visualizar y descargar archivos. Los archivos se almacenan en un bucket S3 simulado localmente con LocalStack.
+Aplicación web tipo Google Drive que permite subir, descargar, eliminar archivos. 
+Los archivos se almacenan en un bucket S3 simulado localmente con LocalStack.
 
 ## Tecnologías utilizadas
 
@@ -10,7 +11,7 @@ Aplicación web tipo Google Drive que permite subir, visualizar y descargar arch
 - **Infraestructura:** Terraform
 - **Contenedores:** Docker
 
-## Requisitos previos
+## Requisitos previos para utilizar
 
 Tener instalado:
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
@@ -19,7 +20,7 @@ Tener instalado:
 
 ## Variables de entorno
 
-Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+Crea un archivo `.env` en la raíz del proyecto con las siguientes variables: (tiene la variable real)
 
 ```env
 LOCALSTACK_AUTH_TOKEN=ls-nANA8409-BAZi-0724-xIGI-lUqiSAKo418c
@@ -36,31 +37,28 @@ S3_BUCKET=drive-clon-bucket
 PORT=3000
 ```
 
-##  Instrucciones para ejecutar
+##  Instrucciones para iniciar
 
-### 1. Clonar el repositorio
+### Clonar el repositorio o descargar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/drive-clon.git
+git clone https://github.com/usuario/drive-clon.git
 cd drive-clon
 ```
 
-### 2. Levantar LocalStack
+### Levantar LocalStack y crear el bucket S3 con Terraform
 
 ```bash
 docker compose up -d
 ```
 
-### 3. Crear el bucket S3 con Terraform
-
 ```bash
 cd infra
 terraform init
 terraform apply
-cd ..
 ```
 
-### 4. Iniciar el Backend
+### Iniciar el Backend
 
 ```bash
 cd backend
@@ -68,9 +66,7 @@ npm install
 npm run dev
 ```
 
-### 5. Iniciar el Frontend
-
-Abre una nueva terminal:
+### Iniciar el Frontend
 
 ```bash
 cd frontend
@@ -78,39 +74,14 @@ npm install
 npm run dev
 ```
 
-### 6. Abrir la aplicación
-
-Abre tu navegador en:
+### Abrir la aplicación
 http://localhost:5173
-
-## Estructura del proyecto
-drive-clon/
-
-├── frontend/          # React + Vite
-
-├── backend/           # Node.js + Express
-
-│   ├── src/
-
-│   │   ├── index.js
-
-│   │   ├── s3Client.js
-
-│   │   └── s3Service.js
-
-├── infra/             # Terraform
-
-│   └── main.tf
-
-├── docker-compose.yml
-
-└── README.md
 
 ## Endpoints del Backend
 
-| Método | Endpoint | Descripción |
-|--------|----------|-------------|
-| POST | `/upload` | Sube un archivo a S3 |
-| GET | `/files` | Lista los archivos en S3 |
-| GET | `/download/:filename` | Descarga un archivo |
-| DELETE | `/delete/:filename` | Elimina un archivo |
+POST : `/upload` Sube un archivo
+GET : `/files` Lista los archivos
+GET : `/download/:filename` Descarga un archivo
+DELETE : `/delete/:filename` Elimina un archivo 
+
+
