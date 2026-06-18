@@ -79,9 +79,9 @@ http://localhost:5173
 
 ## Endpoints del Backend
 
-POST : `/upload` Sube un archivo
-GET : `/files` Lista los archivos
-GET : `/download/:filename` Descarga un archivo
-DELETE : `/delete/:filename` Elimina un archivo 
+- POST : `/upload` Sube un archivo
+- GET : `/files` Lista los archivos
+- GET : `/download/:filename` Descarga un archivo
+- DELETE : `/delete/:filename` Elimina un archivo 
 
 
