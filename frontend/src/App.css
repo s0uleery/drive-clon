@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #F0F7F4;
+  color: #1C3A34;
+}
+
+.container {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 20px 60px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1C3A34;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #4AAF96;
+  margin-top: -22px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.upload-section {
+  flex: 1;
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(45, 125, 111, 0.08);
+  width: 100%;
+  min-width: 600px;
+}
+
+.upload-section h2 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1C3A34;
+}
+
+.dropzone {
+  border: none;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #4AAF96;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 16px;
+  background: #F0F7F4;
+}
+
+.dropzone.dragging {
+  border-color: #2D7D6F;
+  background: #D4EDE7;
+  color: #2D7D6F;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #2D7D6F;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1C3A34;
+}
+
+.message {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #2D7D6F;
+}
+
+.files-section {
+  flex: 1;
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(45, 125, 111, 0.08);
+  width: 100%;
+  min-width: 600px;
+  min-height: 200px;
+}
+.files-section h2 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1C3A34;
+}
+.file-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+.file-card {
+  border: 1px solid #E8F5F1;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  background: #F0F7F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filename {
+  font-weight: 500;
+  color: #1C3A34;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #4AAF96;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.actions button {
+  flex: 1;
+  padding: 8px;
+  font-size: 0.85rem;
+}
+
+button.delete {
+  background: #FEE8E8;
+  color: #E05C5C;
+}
+
+button.delete:hover {
+  background: #E05C5C;
+  color: white;
+}
+
+.empty {
+  color: #4AAF96;
+  text-align: center;
+  margin-top: 20px;
+}
+html, body {
+  overflow-x: hidden;
+  border: none;
+  outline: none;
+}
+
+#root {
+  border: none;
+  outline: none;
+}
